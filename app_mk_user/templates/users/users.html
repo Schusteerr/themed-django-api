@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>Themed Doom Django API</title>
+</head>
+<body>
+    <div class="main">
+        <div class="component">
+            <div class="slayers">
+                <div class="user-container">
+                    <h1>Todos Slayers</h1>
+                    <table>
+                        <tr>
+                            <th>id</th>
+                            <th>nome</th>
+                            <th>idade</th>
+                        </tr>
+                        {% for user in users %}
+                        <tr>
+                            <td>{{user.id_users}}</td>
+                            <td>{{user.nome}}</td>
+                            <td>{{user.idade}}</td>
+                        </tr>
+                        {%endfor%}
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
